@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>睡眠×メンタル セルフケア診断｜3分セルフチェック</title>
+<meta name="description" content="睡眠×メンタルのセルフケアを『続く仕組み』に変える。3分セルフチェックで状態を可視化し、結果ページで詳しく解説します。" />
+<style>
+  :root{
+    --bg1:#f3e8ff;
+    --bg2:#ede9fe;
+    --panel:#ffffff;
+    --text:#1f2937;
+    --muted:#6b7280;
+    --line:rgba(17,24,39,.12);
+    --accent:#8b5cf6;
+    --accent2:#a78bfa;
+    --shadow:0 14px 38px rgba(17,24,39,.10);
+    --r:18px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic","Meiryo",sans-serif;
+    background: linear-gradient(180deg,var(--bg1),var(--bg2));
+    color:var(--text);
+  }
+  .wrap{max-width:860px; margin:0 auto; padding:38px 18px 80px;}
+  header{
+    background: rgba(255,255,255,.55);
+    border:1px solid var(--line);
+    border-radius:var(--r);
+    padding:18px 18px 16px;
+    box-shadow:var(--shadow);
+    backdrop-filter: blur(8px);
+  }
+  h1{
+    margin:0 0 10px;
+    font-size: clamp(26px, 3.3vw, 40px);
+    line-height:1.15;
+    letter-spacing:.01em;
+  }
+  .lead{
+    margin:0;
+    color:var(--muted);
+    line-height:1.85;
+    font-size:14px;
+  }
+  .chips{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px}
+  .chip{
+    border:1px solid var(--line);
+    background:#fff;
+    padding:6px 10px;
+    border-radius:999px;
+    font-size:12px;
+    color:#374151;
+  }
+  .card{
+    margin-top:14px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--r);
+    padding:20px;
+    box-shadow:var(--shadow);
+  }
+  h2{margin:0 0 10px; font-size:18px}
+  .q{margin:14px 0;}
+  label{display:block; font-weight:800; margin:0 0 8px; font-size:14px}
+  select{
+    width:100%;
+    padding:12px 12px;
+    border-radius:14px;
+    border:1px solid var(--line);
+    background:#fff;
+    font-size:14px;
+    outline:none;
+  }
+  .row{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px; align-items:center}
+  button{
+    width:100%;
+    border:none;
+    background: linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;
+    padding:14px 16px;
+    border-radius:999px;
+    font-weight:900;
+    font-size:16px;
+    cursor:pointer;
+    box-shadow: 0 10px 24px rgba(139,92,246,.25);
+  }
+  button:hover{opacity:.95}
+  .note{
+    margin-top:10px;
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.7;
+  }
+  .mini{
+    margin-top:10px;
+    border-top:1px dashed var(--line);
+    padding-top:10px;
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.7;
+  }
+  .footer{
+    margin-top:14px;
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.7;
+    text-align:center;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+</style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <h1>睡眠×メンタル セルフケアを、<br>「続く仕組み」に変える。</h1>
+      <p class="lead">
+        夜の不安、寝つけない、気持ちの波、朝がしんどい——。<br>
+        このページは、<b>“医療ではなく日常のセルフケア”</b>にフォーカスし、<br>
+        <b>寝つきが悪いあなたを助けます。</b>
+      </p>
+      <div class="chips">
+        <span class="chip">3分セルフチェック</span>
+        <span class="chip">結果を詳しく解説</span>
+        <span class="chip"></span>
+        <span class="chip"></span>
+      </div>
+    </header>
+
+    <section class="card" id="check">
+      <h2>🌙 3分セルフチェック</h2>
+      <p class="note">各項目を選んで、最後に「診断結果ボタン」を押してください（このチェックは医療診断ではありません）。</p>
+
+      <div class="q">
+        <label for="q1">① 寝つくまで30分以上かかることが多い</label>
+        <select id="q1">
+          <option value="0">0: ほとんどない</option>
+          <option value="1">1: たまにある</option>
+          <option value="2">2: よくある</option>
+          <option value="3">3: ほぼ毎日</option>
+        </select>
+      </div>
+
+      <div class="q">
+        <label for="q2">② 夜中に目が覚めて、再び眠るのが難しい</label>
+        <select id="q2">
+          <option value="0">0: ほとんどない</option>
+          <option value="1">1: たまにある</option>
+          <option value="2">2: よくある</option>
+          <option value="3">3: ほぼ毎日</option>
+        </select>
+      </div>
+
+      <div class="q">
+        <label for="q3">③ 朝、気分が重くて動き出しに時間がかかる</label>
+        <select id="q3">
+          <option value="0">0: ほとんどない</option>
+          <option value="1">1: たまにある</option>
+          <option value="2">2: よくある</option>
+          <option value="3">3: ほぼ毎日</option>
+        </select>
+      </div>
+
+      <div class="q">
+        <label for="q4">④ 不安や考えごとが頭から離れない</label>
+        <select id="q4">
+          <option value="0">0: ほとんどない</option>
+          <option value="1">1: たまにある</option>
+          <option value="2">2: よくある</option>
+          <option value="3">3: ほぼ毎日</option>
+        </select>
+      </div>
+
+      <div class="q">
+        <label for="q5">⑤ 寝る直前までスマホ/動画/SNSを見てしまう</label>
+        <select id="q5">
+          <option value="0">0: ほとんどない</option>
+          <option value="1">1: たまにある</option>
+          <option value="2">2: よくある</option>
+          <option value="3">3: ほぼ毎日</option>
+        </select>
+      </div>
+
+      <button type="button" onclick="goResult()">診断結果ボタン</button>
+
+      <div class="mini">
+        <b>結果ページについて：</b><br>
+        診断結果を「詳しく解説」し、あなたに合うおすすめの次の一手（商品リンク）へ案内します。
+      </div>
+    </section>
+
+    <div class="footer">
+      ※深刻な不眠・強い抑うつ・希死念慮などがある場合は、医療機関や公的相談窓口へご相談ください。
+    </div>
+  </div>
+
+<script>
+  function goResult(){
+    const score =
+      Number(document.getElementById("q1").value) +
+      Number(document.getElementById("q2").value) +
+      Number(document.getElementById("q3").value) +
+      Number(document.getElementById("q4").value) +
+      Number(document.getElementById("q5").value);
+
+    // URLにスコアを渡して結果ページへ
+    location.href = "result.html?score=" + encodeURIComponent(score);
+  }
+</script>
+</body>
+</html>
