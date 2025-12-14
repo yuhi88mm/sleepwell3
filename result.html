@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>診断結果｜睡眠×メンタル セルフケア</title>
+<meta name="description" content="3分セルフチェックの結果を詳しく解説。タイプ別の改善ポイントと、30日プログラム・サブスク・おすすめアイテム（アフィ）へ誘導します。" />
+<style>
+  :root{
+    --bg1:#ede9fe;
+    --bg2:#f5f3ff;
+    --panel:#ffffff;
+    --text:#1f2937;
+    --muted:#6b7280;
+    --line:rgba(17,24,39,.12);
+    --accent:#8b5cf6;
+    --accent2:#a78bfa;
+    --good:#10b981;
+    --warn:#f59e0b;
+    --bad:#ef4444;
+    --shadow:0 14px 38px rgba(17,24,39,.10);
+    --r:18px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic","Meiryo",sans-serif;
+    background: linear-gradient(180deg,var(--bg1),var(--bg2));
+    color:var(--text);
+  }
+  .wrap{max-width:920px; margin:0 auto; padding:34px 18px 90px;}
+  .top{
+    display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between;
+    margin-bottom:12px;
+  }
+  .back{
+    display:inline-flex; align-items:center; gap:8px;
+    border:1px solid var(--line);
+    background: rgba(255,255,255,.65);
+    padding:10px 12px;
+    border-radius:999px;
+    text-decoration:none;
+    color:var(--text);
+    box-shadow:var(--shadow);
+  }
+  .back:hover{opacity:.95}
+  .title{
+    margin:0;
+    font-size: clamp(22px, 3vw, 32px);
+    line-height:1.15;
+    letter-spacing:.01em;
+  }
+  .chips{display:flex; gap:8px; flex-wrap:wrap; margin-top:8px}
+  .chip{
+    border:1px solid var(--line);
+    background:#fff;
+    padding:6px 10px;
+    border-radius:999px;
+    font-size:12px;
+    color:#374151;
+  }
+  .card{
+    margin-top:14px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--r);
+    padding:18px;
+    box-shadow:var(--shadow);
+  }
+  .grid{display:grid; grid-template-columns:1.1fr .9fr; gap:14px}
+  @media (max-width: 980px){ .grid{grid-template-columns:1fr} }
+
+  .badge{
+    display:inline-block;
+    padding:6px 10px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:900;
+    border:1px solid var(--line);
+    background:#fff;
+  }
+  .badge.good{border-color:rgba(16,185,129,.35); background:rgba(16,185,129,.08)}
+  .badge.warn{border-color:rgba(245,158,11,.35); background:rgba(245,158,11,.10)}
+  .badge.bad{border-color:rgba(239,68,68,.35); background:rgba(239,68,68,.08)}
+  .p{margin:8px 0 0; color:var(--muted); line-height:1.8; font-size:14px}
+  h2{margin:0 0 8px; font-size:18px}
+  h3{margin:0 0 8px; font-size:15px}
+  ul{margin:0; padding-left:18px}
+  li{margin:6px 0; color:var(--muted); line-height:1.65; font-size:13px}
+  .ctaRow{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px}
+  @media (max-width: 640px){ .ctaRow{grid-template-columns:1fr} }
+  .btn{
+    display:inline-flex; justify-content:center; align-items:center; gap:8px;
+    border:none;
+    background: linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;
+    padding:13px 14px;
+    border-radius:999px;
+    font-weight:900;
+    text-decoration:none;
+    cursor:pointer;
+    box-shadow: 0 10px 24px rgba(139,92,246,.22);
+  }
+  .btn:hover{opacity:.95}
+  .btn2{
+    background: rgba(255,255,255,.8);
+    color:var(--text);
+    border:1px solid var(--line);
+    box-shadow:var(--shadow);
+  }
+  .btn2:hover{opacity:.95}
+  .small{margin-top:10px; font-size:12px; color:var(--muted); line-height:1.7}
+  .mono{font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;}
+  .formRow{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:10px}
+  input[type="url"], input[type="text"]{
+    width:min(560px, 100%);
+    padding:12px 12px;
+    border-radius:14px;
+    border:1px solid var(--line);
+    background:#fff;
+    font-size:14px;
+    outline:none;
+  }
+  textarea{
+    width:100%;
+    min-height:92px;
+    padding:12px 12px;
+    border-radius:14px;
+    border:1px solid var(--line);
+    background:#fff;
+    font-size:14px;
+    outline:none;
+    resize:vertical;
+    margin-top:10px;
+  }
+  .hr{height:1px; border:0; background:var(--line); margin:14px 0;}
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+</style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="top">
+      <h1 class="title">診断結果（詳しい解説）</h1>
+      <a class="back" href="index.html">← 3分セルフチェックに戻る</a>
+    </div>
+
+    <div class="chips">
+      <span class="chip"></span>
+      <span class="chip"></span>
+      <span class="chip"></span>
+      <span class="chip"></span>
+    </div>
+
+    <section class="card grid">
+      <div>
+        <h2 id="typeTitle">—</h2>
+        <div id="typeBadge"></div>
+        <p class="p" id="typeDesc">—</p>
+        <div class="hr"></div>
+        <h3>あなたのスコア</h3>
+        <p class="p"><span class="mono" id="scoreText">—</span> / 15</p>
+      </div>
+
+      <div>
+        <h3>まず最初にやること（優先順位）</h3>
+        <ul id="priorityList"></ul>
+        <div class="ctaRow">
+          <a class="btn" href="#offer">おすすめの次の一手へ</a>
+          <a class="btn btn2" href="#affiliate">アイテム（アフィ）を見る</a>
+        </div>
+        <p class="small">※これは医療診断ではありません。強い不調が続く場合は、医療機関/相談窓口へ。</p>
+      </div>
+    </section>
+
+    <section class="card" id="detail">
+      <h2>なぜこの状態になりやすい？（やさしい解説）</h2>
+      <p class="p" id="detailText">—</p>
+      <div class="hr"></div>
+
+      <div class="grid" style="grid-template-columns:1fr 1fr; gap:14px">
+        <div class="card" style="margin:0; box-shadow:none">
+          <h3>よくある“眠れない夜”のループ</h3>
+          <ul>
+            <li>「眠らなきゃ」→ 焦りが出る</li>
+            <li>焦り → 交感神経が優位になりやすい</li>
+            <li>スマホ・SNSで気を紛らわす</li>
+            <li>脳が刺激されてさらに眠れない</li>
+          </ul>
+        </div>
+        <div class="card" style="margin:0; box-shadow:none">
+          <h3>このページの方針</h3>
+          <ul>
+            <li>気合いではなく「仕組み」で整える</li>
+            <li>1日3分から始めて“失敗しない”</li>
+            <li>道具でラクにする（環境・計測）</li>
+            <li>続いたら“勝ち”の設計にする</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="offer">
+      <h2>おすすめの次の一手</h2>
+      <p class="p">
+        下のボタンは<b>あなたの販売ページURL</b>に差し替えて使えます（note / Stripe / STORES / BASE など）。<br>
+        
+      </p>
+
+      <div class="grid" style="grid-template-columns:1fr 1fr; gap:14px">
+        <div class="card" style="margin:0; box-shadow:none">
+          <h3>📘 30日セルフケアプログラム（主力）</h3>
+          <p class="p">「整える→定着→強化」を30日で回し、戻りにくい“型”を作ります。</p>
+          <a class="btn" id="productLink" href="https://example.com" target="_blank" rel="noopener">プログラムを見る</a>
+          <p class="small">目標例：<span class="mono">¥29,800 × 35件 = 約¥1,043,000/月</span></p>
+        </div>
+
+        <div class="card" style="margin:0; box-shadow:none">
+          <h3>🧩 月額サポート</h3>
+          <p class="p">続ける場所があると戻りにくい。習慣の“維持”で安定化。</p>
+          <a class="btn btn2" id="subLink" href="https://example.com" target="_blank" rel="noopener">月額サポートを見る</a>
+          <p class="small">目標例：<span class="mono">¥3,980 × 260人 = 約¥1,034,800/月</span></p>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+      <h3>リンクをあなたのURLに差し替える（このページ内だけのデモ反映）</h3>
+      <div class="formRow">
+        <input id="urlProduct" type="url" placeholder="30日プログラムのURL（差し替え）" />
+        <input id="urlSub" type="url" placeholder="月額サポートのURL（差し替え）" />
+        <button class="btn btn2" type="button" onclick="applyLinks()">このページ内に反映</button>
+      </div>
+      <p class="small">
+        ※運用では、HTML内の <span class="mono">href</span> を直接書き換えるのが確実です（この反映は保存されません）。
+      </p>
+    </section>
+
+    <section class="card" id="affiliate">
+      <h2>おすすめアイテム</h2>
+      <p class="p"></p>
+
+      <div class="grid" style="grid-template-columns:1fr 1fr; gap:14px">
+        <div class="card" style="margin:0; box-shadow:none">
+          <h3>🛏️ 睡眠環境（枕/遮光/温湿度）</h3>
+          <ul>
+            <li>枕・マット・寝具</li>
+            <li>アイマスク/遮光カーテン</li>
+            <li>ホワイトノイズ/耳栓</li>
+            <li>温湿度計/加湿器</li>
+          </ul>
+          <div class="formRow">
+            <input id="affSleep" type="url" placeholder="アフィリンク（睡眠環境）" />
+            <a class="btn btn2" id="openSleep" href="#" target="_blank" rel="noopener">開く</a>
+            <button class="btn" type="button" onclick="copyVal('affSleep')">コピー</button>
+          </div>
+        </div>
+
+        <div class="card" style="margin:0; box-shadow:none">
+          <h3>⌚ 計測・習慣化（睡眠計測/タイマー）</h3>
+          <ul>
+            <li>スマートウォッチ（睡眠計測）</li>
+            <li>ブルーライト対策</li>
+            <li>タイマー/アラーム</li>
+            <li>日記・ノート（書き出し）</li>
+          </ul>
+          <div class="formRow">
+            <input id="affTrack" type="url" placeholder="アフィリンク（計測・習慣化）" />
+            <a class="btn btn2" id="openTrack" href="#" target="_blank" rel="noopener">開く</a>
+            <button class="btn" type="button" onclick="copyVal('affTrack')">コピー</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+      <h3></h3>
+      <div class="formRow">
+        <input id="baseUrl" type="url" placeholder="元URL（アフィリンク）" />
+        <input id="utm" type="text" placeholder="utm_source=github&utm_medium=site&utm_campaign=sleepcare" />
+        <button class="btn btn2" type="button" onclick="genUrl()">生成</button>
+        <button class="btn" type="button" onclick="copyOut()">コピー</button>
+      </div>
+      <textarea id="out" placeholder="生成されたURLがここに表示されます"></textarea>
+
+      <div class="hr"></div>
+      <h3>PR表記（テンプレ）</h3>
+      <textarea readonly>※本ページにはプロモーション（広告）を含みます。リンクから商品購入が発生した場合、運営者に紹介料が入ることがあります。</textarea>
+      <p class="small">ASP規約に合わせて調整してください。</p>
+    </section>
+
+    <footer class="small" style="text-align:center; margin-top:14px">
+      免責：本ページは情報提供目的で、診断・治療を目的とするものではありません。強い不調が続く場合は医療機関/公的相談窓口へ。<br>
+      <span class="mono">© Sleep & Mental Self-care</span>
+    </footer>
+  </div>
+
+<script>
+  function getScore(){
+    const s = new URLSearchParams(location.search).get("score");
+    const n = Number(s);
+    return Number.isFinite(n) ? n : 0;
+  }
+
+  function setOpenBinding(inputId, anchorId){
+    const inp = document.getElementById(inputId);
+    const a = document.getElementById(anchorId);
+    const update = () => {
+      const v = (inp.value || "").trim();
+      a.href = v || "#";
+      a.style.opacity = v ? "1" : ".55";
+      a.style.pointerEvents = v ? "auto" : "none";
+    };
+    inp.addEventListener("input", update);
+    update();
+  }
+
+  function applyLinks(){
+    const p = (document.getElementById("urlProduct").value || "").trim();
+    const s = (document.getElementById("urlSub").value || "").trim();
+    if(p) document.getElementById("productLink").href = p;
+    if(s) document.getElementById("subLink").href = s;
+    alert("このページ内のリンクに反映しました（デモ）。運用ではHTMLのhrefを書き換えるのが確実です。");
+  }
+
+  async function copyText(txt){
+    try{
+      await navigator.clipboard.writeText(txt);
+      alert("コピーしました！");
+    }catch(e){
+      const t = document.createElement("textarea");
+      t.value = txt;
+      document.body.appendChild(t);
+      t.select();
+      document.execCommand("copy");
+      document.body.removeChild(t);
+      alert("コピーしました！（互換モード）");
+    }
+  }
+  function copyVal(id){
+    const v = (document.getElementById(id).value || "").trim();
+    if(!v){ alert("先にリンクを入力してください。"); return; }
+    copyText(v);
+  }
+
+  function joinUrl(base, param){
+    if(!param) return base;
+    const hasQ = base.includes("?");
+    const glue = hasQ ? ((base.endsWith("?") || base.endsWith("&")) ? "" : "&") : "?";
+    return base + glue + param.replace(/^\?/, "").replace(/^&/, "");
+  }
+  function genUrl(){
+    const base = (document.getElementById("baseUrl").value || "").trim();
+    const utm  = (document.getElementById("utm").value || "").trim();
+    if(!base){ alert("元URLを入力してください。"); return; }
+    document.getElementById("out").value = joinUrl(base, utm);
+  }
+  function copyOut(){
+    const v = (document.getElementById("out").value || "").trim();
+    if(!v){ alert("先にURLを生成してください。"); return; }
+    copyText(v);
+  }
+
+  // --- 結果レンダリング
+  (function(){
+    const score = getScore();
+    document.getElementById("scoreText").textContent = String(score);
+
+    const typeTitle = document.getElementById("typeTitle");
+    const typeBadge = document.getElementById("typeBadge");
+    const typeDesc  = document.getElementById("typeDesc");
+    const detailText = document.getElementById("detailText");
+    const list = document.getElementById("priorityList");
+
+    let badgeHtml = "";
+    let title = "";
+    let desc = "";
+    let detail = "";
+    let priorities = [];
+
+    if(score <= 4){
+      title = "🌙 軽度タイプ：まずは“環境”を整えると伸びやすい";
+      badgeHtml = '<span class="badge good">整えやすいゾーン</span>';
+      desc = "大きな崩れは少なめ。環境の微調整だけでも寝つきがラクになりやすい状態です。";
+      detail = "このゾーンは『寝室の刺激（光・音・温度）』『寝る直前のスマホ刺激』を軽く整えるだけで、変化が出やすいことが多いです。まずは“完璧”を狙わず、1〜2個だけ直すのがコツ。";
+      priorities = [
+        "寝室の光を減らす（間接照明／遮光）",
+        "寝る前スマホを“10分だけ”短くする",
+        "寝具・温度・湿度を快適寄りに寄せる"
+      ];
+    }else if(score <= 8){
+      title = "🌙🌙 中程度タイプ：環境＋思考の整理が効く";
+      badgeHtml = '<span class="badge warn">整える設計が必要</span>';
+      desc = "睡眠とメンタルに軽い負荷がかかりやすい状態。『考えごと』が入眠を邪魔しやすい傾向があります。";
+      detail = "ここでは『眠れない不安→焦り→さらに眠れない』のループが起きがち。ポイントは“考えごとを夜に抱えない”仕組み。書き出しや区切り（明日に渡す）が効きます。";
+      priorities = [
+        "寝る前1分：不安を書き出して“明日対応”に分離",
+        "夜は“答えを出さない時間”と決める",
+        "環境（光/音/温度）を1つだけ改善"
+      ];
+    }else if(score <= 12){
+      title = "🌙🌙🌙 やや強めタイプ：30日で“型”を作るのが近道";
+      badgeHtml = '<span class="badge warn">戻りやすいゾーン</span>';
+      desc = "不安の強さや思考のクセが睡眠に影響しやすい状態。単発の対処では戻りやすいので“習慣の型”が必要です。";
+      detail = "このゾーンは、対処法を知っていても“続かない”ことで効果が出づらいことが多いです。だからこそ、30日で『整える→定着→強化』を回して、戻りにくい仕組みを作るのがおすすめ。";
+      priorities = [
+        "眠れない夜の“緊急ルーティン（3分）”を固定",
+        "30日単位で“やることを絞って”習慣化",
+        "スマホの刺激を減らすルールを1つ入れる"
+      ];
+    }else{
+      title = "⚠ 強い負荷タイプ：無理をせず、相談も視野に";
+      badgeHtml = '<span class="badge bad">優先は安全</span>';
+      desc = "セルフケアだけで抱え込みすぎないことが大切。強い不眠や気分の落ち込みが続く場合は専門家への相談も検討してください。";
+      detail = "ここは“頑張り”でどうにかしようとすると消耗しやすいゾーンです。セルフケアは『安全確保』『休む設計』を優先しつつ、必要に応じて医療機関や公的窓口を活用してください。";
+      priorities = [
+        "安全確保：信頼できる人・相談先を確保",
+        "“休む設計”を先に作る（睡眠時間より休息）",
+        "できる範囲で環境の刺激を減らす"
+      ];
+    }
+
+    typeTitle.textContent = title;
+    typeBadge.innerHTML = badgeHtml;
+    typeDesc.textContent = desc;
+    detailText.textContent = detail;
+
+    list.innerHTML = priorities.map(x => "<li>" + x + "</li>").join("");
+
+    // アフィ入力欄の「開く」ボタン挙動
+    setOpenBinding("affSleep","openSleep");
+    setOpenBinding("affTrack","openTrack");
+  })();
+</script>
+</body>
+</html>
